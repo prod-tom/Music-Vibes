@@ -6,6 +6,7 @@ body {
     background-color: #f0f0f5;
 }
 
+
 header {
     background-color: #1a1a40;
     color: #fff;
@@ -42,59 +43,61 @@ nav {
     color: #ff4c4c;
 }
 
-/* Hero Section */
-.hero {
-    text-align: center;
-    background: linear-gradient(to right, #ff4c4c, #ffdd57);
-    color: white;
+
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
     padding: 2rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.hero h1 {
-    font-size: 2.5rem;
+.contact-form h1 {
+    text-align: center;
+    font-size: 2rem;
+    color: #1a1a40;
     margin-bottom: 1rem;
 }
 
-/* Featured Events Section */
-.featured-events {
+.contact-form p {
     text-align: center;
+    color: #666;
     margin-bottom: 2rem;
 }
 
-.event-slider {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+.contact-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+    color: #333;
 }
 
-.event-card {
-    background: #fff;
-    border: 2px solid #1a1a40;
-    border-radius: 10px;
-    padding: 1rem;
-    width: 220px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 1rem;
 }
 
-.event-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Video Section */
-.video {
-    text-align: center;
-    margin-top: 2rem;
-}
-
-.video iframe {
-    border-radius: 10px;
+.contact-form button {
+    background-color: #1a1a40;
+    color: #fff;
     border: none;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-/* Footer */
+.contact-form button:hover {
+    background-color: #ff4c4c;
+}
+
 footer {
     text-align: center;
     padding: 1rem;
