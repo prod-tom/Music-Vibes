@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contact Music Vibes to submit your event or inquiry.">
+    <title>Contact - Music Vibes</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="scripts.js"></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Music Vibes</div>
+            <ul class="nav-links">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="EVENTS.html">Events</a></li>
+                <li><a href="CONTACT.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="contact-form">
+            <h1>Contact Us</h1>
+            <p>Have an event or question? Let us know!</p>
+            <form id="event-form">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="event">Event Description:</label>
+                <textarea id="event" name="event" rows="4" required></textarea>
+
+                <label for="date">Event Date:</label>
+                <input type="date" id="date" name="date">
+
+                <label for="location">Event Location:</label>
+                <input type="text" id="location" name="location">
+
+                <label for="file">Upload Event Flyer (Optional):</label>
+                <input type="file" id="file" name="file" accept="image/*">
+
+                <button type="submit">Submit</button>
+            </form>
+            <p id="confirmation-message" style="display: none; color: green; margin-top: 1rem;">Thank you! Your event has been submitted.</p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Music Vibes Events</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

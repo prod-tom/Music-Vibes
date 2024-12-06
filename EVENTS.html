@@ -1,0 +1,60 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Browse and discover exciting music events near you.">
+    <title>Events - Music Vibes</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">Music Vibes</div>
+            <ul class="nav-links">
+                <li><a href="Index.html">Home</a></li>
+                <li><a href="EVENTS.html">Events</a></li>
+                <li><a href="CONTACT.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="filters">
+            <h1>Find Your Event</h1>
+            <div class="filter-options">
+                <select id="genre-filter">
+                    <option value="all">All Genres</option>
+                    <option value="rock">Rock</option>
+                    <option value="jazz">Jazz</option>
+                    <option value="pop">Pop</option>
+                </select>
+                <input type="date" id="date-filter">
+                <button id="filter-btn">Filter</button>
+            </div>
+        </section>
+        <section class="events-list">
+            <div class="event-card" data-genre="rock" data-date="2024-12-10">
+                <h3>Rock Fiesta</h3>
+                <p>Genre: Rock</p>
+                <p>Date: December 10, 2024</p>
+                <p>Location: City Hall</p>
+            </div>
+            <div class="event-card" data-genre="jazz" data-date="2024-12-15">
+                <h3>Jazz Night</h3>
+                <p>Genre: Jazz</p>
+                <p>Date: December 15, 2024</p>
+                <p>Location: Riverside Club</p>
+            </div>
+            <div class="event-card" data-genre="pop" data-date="2024-12-20">
+                <h3>Pop Extravaganza</h3>
+                <p>Genre: Pop</p>
+                <p>Date: December 20, 2024</p>
+                <p>Location: Central Park</p>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 Music Vibes Events</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>

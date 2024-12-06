@@ -1,0 +1,114 @@
+
+body {
+    font-family: 'Verdana', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f5;
+}
+
+header {
+    background-color: #1a1a40;
+    color: #fff;
+    padding: 1rem;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: #ffdd57;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #ff4c4c;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    background: linear-gradient(to right, #ff4c4c, #ffdd57);
+    color: white;
+    padding: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Featured Events Section */
+.featured-events {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.event-slider {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    background: #fff;
+    border: 2px solid #1a1a40;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Video Section */
+.video {
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.video iframe {
+    border-radius: 10px;
+    border: none;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1a1a40;
+    color: #fff;
+    margin-top: 2rem;
+}
+
+footer a {
+    color: #ffdd57;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #ff4c4c;
+}
