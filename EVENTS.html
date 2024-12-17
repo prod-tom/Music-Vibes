@@ -42,6 +42,7 @@
             </div>
         </section>
 
+        <!-- Event Cards Section -->
         <section class="events-list">
             <div class="event-card" data-genre="rock" data-date="2024-12-10">
                 <h3>Rock Fiesta</h3>
@@ -68,42 +69,6 @@
         <p>&copy; 2024 Music Vibes Events</p>
     </footer>
 
-    <script>
-// Function to fetch weather data from OpenWeatherMap API
-function getWeather(city) {
-    const apiKey = 'd7bbc53df1d48ffd5bf7dbb955b50b12'; // Your OpenWeatherMap API key
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-
-    fetch(url)
-        .then(response => response.json())
-        .then(data => {
-            // Display the weather data on the page
-            const weatherDescription = data.weather[0].description;
-            const temperature = data.main.temp;
-            const weatherContainer = document.getElementById('weather-info');
-
-            weatherContainer.innerHTML = `
-                <p>Weather in ${city}: ${weatherDescription}</p>
-                <p>Temperature: ${temperature}°C</p>
-            `;
-        })
-        .catch(error => {
-            console.error('Error fetching weather data:', error);
-            document.getElementById('weather-info').innerHTML = `<p>Could not fetch weather data for ${city}.</p>`;
-        });
-
-
-    // Fetch weather for the event location (using the event location)
-    const eventLocation = document.getElementById('event-location').value.trim();
-    if (eventLocation) {
-        getWeather(eventLocation);
-    }
-});
-
-// Example: Get weather for a specific city (e.g., New York) when the page loads
-window.onload = function() {
-    getWeather('New York'); // Default city, replace as needed
-};
-    </script>
+    <script src="scripts.js"></script>
 </body>
 </html>
