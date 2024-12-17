@@ -1,4 +1,4 @@
-/* General Body and Header Styling */
+/* General Styles */
 body {
     font-family: 'Verdana', sans-serif;
     margin: 0;
@@ -6,6 +6,7 @@ body {
     background-color: #f0f0f5; /* Light neutral background */
 }
 
+/* Header and Footer */
 header, footer {
     background-color: #1a1a40; /* Dark blue for header/footer */
     color: #fff;
