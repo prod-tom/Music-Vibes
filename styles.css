@@ -1,4 +1,4 @@
-/* General Styles */
+/* General Body and Header Styling */
 body {
     font-family: 'Verdana', sans-serif;
     margin: 0;
@@ -6,26 +6,25 @@ body {
     background-color: #f0f0f5; /* Light neutral background */
 }
 
-/* Header and Footer */
-header, footer {
-    background-color: #1a1a40; /* Dark blue for header/footer */
+/* Header */
+header {
+    background-color: #1a1a40; /* Dark blue for header */
     color: #fff;
     padding: 1rem;
-    text-align: center;
 }
 
-header nav {
+nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-header .logo {
+.logo {
     font-size: 2rem;
     font-weight: bold;
 }
 
-nav .nav-links {
+.nav-links {
     list-style: none;
     display: flex;
     gap: 1rem;
@@ -33,60 +32,78 @@ nav .nav-links {
     padding: 0;
 }
 
-nav .nav-links a {
-    color: #ffdd57; /* Bright yellow links */
+.nav-links a {
+    color: #ffdd57; /* Bright yellow links for contrast */
     text-decoration: none;
     font-size: 1rem;
-    transition: color 0.3s;
 }
 
-nav .nav-links a:hover {
-    color: #ff4c4c; /* Red on hover */
+.nav-links a:hover {
+    color: #ff4c4c; /* Red hover color */
 }
 
-/* Hero Section */
-.hero {
+/* Filters Section */
+.filters {
     text-align: center;
-    background: linear-gradient(to right, #ff4c4c, #ffdd57);
-    color: white;
-    padding: 2rem;
-    margin-bottom: 2rem;
+    padding: 2rem 0;
+    background: #ffffff; /* White background for focus */
+    border-bottom: 2px solid #ddd;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for focus */
 }
 
-.hero h1 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-/* Featured Events Section */
-.featured-events {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-/* Event Slider Section */
-.event-slider {
+.filter-options {
     display: flex;
-    gap: 1rem;
     justify-content: center;
-    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 1rem;
 }
 
-/* Event Card Styling */
+.filter-options select,
+.filter-options input,
+.filter-options button {
+    padding: 0.8rem;
+    border: 1px solid #1a1a40; /* Matches brand colors */
+    border-radius: 5px;
+    font-size: 1rem;
+    background: #f9f9f9;
+    cursor: pointer;
+}
+
+.filter-options button {
+    background-color: #1a1a40; /* Dark button with white text */
+    color: #fff;
+    border: none;
+    transition: background-color 0.3s;
+}
+
+.filter-options button:hover {
+    background-color: #ff4c4c; /* Red hover effect */
+}
+
+/* Events List */
+.events-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    padding: 2rem;
+}
+
 .event-card {
     background: #fff;
-    border: 2px solid #1a1a40;
+    border: 2px solid #1a1a40; /* Solid border for defined look */
     border-radius: 10px;
-    padding: 1rem;
-    width: 220px;
+    padding: 1.5rem;
+    width: 250px; /* Slightly larger card width */
     text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for some depth */
     transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .event-card:hover {
     transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More shadow on hover for emphasis */
 }
 
 .event-card h3 {
@@ -101,44 +118,6 @@ nav .nav-links a:hover {
     margin: 0.5rem 0;
 }
 
-/* Filters Section */
-.filters {
-    text-align: center;
-    padding: 2rem 0;
-    background: #ffffff;
-    border-bottom: 2px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.filter-options {
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    margin-top: 1rem;
-}
-
-.filter-options select,
-.filter-options input,
-.filter-options button {
-    padding: 0.8rem;
-    border: 1px solid #1a1a40;
-    border-radius: 5px;
-    font-size: 1rem;
-    background: #f9f9f9;
-    cursor: pointer;
-}
-
-.filter-options button {
-    background-color: #1a1a40;
-    color: #fff;
-    border: none;
-    transition: background-color 0.3s;
-}
-
-.filter-options button:hover {
-    background-color: #ff4c4c; /* Red button on hover */
-}
-
 /* Video Section */
 .video {
     text-align: center;
@@ -147,19 +126,84 @@ nav .nav-links a:hover {
 
 .video iframe {
     width: 100%;
-    max-width: 900px;
+    max-width: 900px; /* Larger size to fit the  Page */
     height: 500px;
     border-radius: 10px;
     border: none;
 }
 
-/* Footer Links */
+/* Contact Page Form */
+.contact-form {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
+.contact-form h1 {
+    text-align: center;
+    color: #1a1a40;
+    margin-bottom: 1rem;
+}
+
+.contact-form p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.contact-form label {
+    display: block;
+    margin: 1rem 0 0.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.contact-form button {
+    display: block;
+    width: 100%;
+    padding: 1rem;
+    background-color: #1a1a40;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    margin-top: 1.5rem;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #ff4c4c;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background: #1a1a40;
+    color: #fff;
+    margin-top: 2rem;
+    font-size: 0.9rem;
+}
+
 footer a {
     color: #ffdd57;
     text-decoration: none;
-    transition: color 0.3s;
 }
 
 footer a:hover {
-    color: #ff4c4c; /* Red on hover */
+    color: #ff4c4c; /* Red hover for footer links */
 }
