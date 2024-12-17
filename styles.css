@@ -42,13 +42,112 @@ nav {
     color: #ff4c4c; /* Red hover color */
 }
 
-/* Filters Section */
+/* Hero Section for Homepage */
+.hero {
+    text-align: center;
+    background: linear-gradient(to right, #ff4c4c, #ffdd57); /* Vibrant gradient */
+    color: white;
+    padding: 2rem;
+    margin-bottom: 2rem;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+/* Featured Events Section for Homepage */
+.featured-events {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Event Slider for Homepage */
+.event-slider {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Event Cards */
+.event-card {
+    background: #fff;
+    border: 2px solid #1a1a40;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 220px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: scale(1.05);
+}
+
+.event-card h3 {
+    font-size: 1.4rem;
+    color: #1a1a40;
+    margin-bottom: 0.5rem;
+}
+
+.event-card p {
+    font-size: 1rem;
+    color: #666;
+    margin: 0.5rem 0;
+}
+
+/* Quote Section */
+.quote {
+    text-align: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: #f9f9f9; /* Light background for contrast */
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.quote h2 {
+    font-size: 1.8rem;
+    color: #1a1a40;
+    margin-bottom: 1rem;
+}
+
+.quote blockquote {
+    font-size: 1.5rem;
+    font-style: italic;
+    color: #555;
+    margin: 1rem 0;
+    quotes: "“" "”";
+}
+
+.quote blockquote:before {
+    content: open-quote;
+    font-size: 2rem;
+    color: #1a1a40;
+}
+
+.quote blockquote:after {
+    content: close-quote;
+    font-size: 2rem;
+    color: #1a1a40;
+}
+
+.quote p {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Filters Section for Events Page */
 .filters {
     text-align: center;
     padding: 2rem 0;
     background: #ffffff; /* White background for focus */
     border-bottom: 2px solid #ddd;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Soft shadow for focus */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .filter-options {
@@ -63,7 +162,7 @@ nav {
 .filter-options input,
 .filter-options button {
     padding: 0.8rem;
-    border: 1px solid #1a1a40; /* Matches brand colors */
+    border: 1px solid #1a1a40;
     border-radius: 5px;
     font-size: 1rem;
     background: #f9f9f9;
@@ -81,55 +180,13 @@ nav {
     background-color: #ff4c4c; /* Red hover effect */
 }
 
-/* Events List */
+/* Events List for Events Page */
 .events-list {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
     justify-content: center;
     padding: 2rem;
-}
-
-.event-card {
-    background: #fff;
-    border: 2px solid #1a1a40; /* Solid border for defined look */
-    border-radius: 10px;
-    padding: 1.5rem;
-    width: 250px; /* Slightly larger card width */
-    text-align: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a shadow for some depth */
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.event-card:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More shadow on hover for emphasis */
-}
-
-.event-card h3 {
-    font-size: 1.4rem;
-    color: #1a1a40;
-    margin-bottom: 0.5rem;
-}
-
-.event-card p {
-    font-size: 1rem;
-    color: #666;
-    margin: 0.5rem 0;
-}
-
-/* Video Section */
-.video {
-    text-align: center;
-    margin-top: 3rem;
-}
-
-.video iframe {
-    width: 100%;
-    max-width: 900px; /* Larger size to fit the  Page */
-    height: 500px;
-    border-radius: 10px;
-    border: none;
 }
 
 /* Contact Page Form */
@@ -140,7 +197,7 @@ nav {
     background: #fff;
     border: 1px solid #ddd;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .contact-form h1 {
