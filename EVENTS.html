@@ -34,13 +34,57 @@
             </div>
         </section>
 
-        <!-- Weather Info Section -->
-        <section class="weather-info">
-            <h2>Current Weather</h2>
-            <div id="weather-info">
-                <!-- Weather data will be displayed here -->
-            </div>
-        </section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Music Vibes - Weather</title>
+</head>
+<body>
+
+    <!-- Weather Info Section -->
+    <section class="weather-info">
+        <h2>Current Weather</h2>
+        <div id="weather-info">
+            <!-- Weather data will be displayed here -->
+        </div>
+    </section>
+
+    <script>
+        // Function to fetch weather data from OpenWeatherMap API using latitude and longitude
+        function getWeather() {
+            const apiKey = '310c727ea37f09d90c41d21a822d200c'; 
+            const lat = 44.34;  
+            const lon = 10.99; 
+            const url = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+
+            fetch(url)
+                .then(response => response.json())
+                .then(data => {
+                    // Extract weather information from the response
+                    const weatherDescription = data.list[0].weather[0].description;
+                    const temperature = data.list[0].main.temp;
+                    const weatherContainer = document.getElementById('weather-info');
+
+                    // Display the weather information in the weather-info div
+                    weatherContainer.innerHTML = `
+                        <p>Weather: ${weatherDescription}</p>
+                        <p>Temperature: ${temperature}°C</p>
+                    `;
+                })
+                .catch(error => {
+                    console.error('Error fetching weather data:', error);
+                    document.getElementById('weather-info').innerHTML = `<p>Could not fetch weather data.</p>`;
+                });
+        }
+
+        // Fetch weather on page load
+        window.onload = function() {
+            getWeather();  // Fetch weather for the specified coordinates
+        };
+    </script>
+
 
         <!-- Event Cards Section -->
         <section class="events-list">
